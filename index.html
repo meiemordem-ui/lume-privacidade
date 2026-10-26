@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Política de Privacidade do Lume</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Source+Serif+4:wght@400;600&display=swap">
+<style>
+/* Layout: coluna única de leitura, no tom monástico do app (creme, âmbar, serifa). */
+:root {
+  --bg: #F4EFE6;
+  --fg: #2A2420;
+  --muted: #6B5F55;
+  --line: #E2D8C8;
+  --accent: #A9520E;
+  --card: #FBF8F2;
+  --f-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --f-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #16120E; --fg: #F2EADD; --muted: #B9AC9C; --line: #3A3027; --accent: #E9A257; --card: #211B15;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #16120E; --fg: #F2EADD; --muted: #B9AC9C; --line: #3A3027; --accent: #E9A257; --card: #211B15;
+  color-scheme: dark;
+}
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--f-body);
+  font-size: 17px;
+  line-height: 1.65;
+  padding-block: 40px 56px;
+  margin: 0;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+main { max-width: 40rem; margin: 0 auto; min-width: 0; }
+.marca { font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin: 0 0 12px; }
+h1 { font-family: var(--f-display); font-weight: 600; font-size: clamp(2rem, 6vw, 2.6rem); line-height: 1.1; margin: 0 0 8px; text-wrap: balance; }
+.data { color: var(--muted); font-size: 15px; margin: 0 0 28px; }
+.resumo { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 16px 18px; margin: 0 0 8px; }
+.resumo p { margin: 0; }
+h2 { font-family: var(--f-display); font-weight: 600; font-size: 1.5rem; line-height: 1.2; margin: 34px 0 8px; text-wrap: balance; }
+p, ul { margin: 0 0 12px; }
+ul { padding-left: 1.2em; }
+li { margin-bottom: 6px; }
+a { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.email { font-weight: 600; overflow-wrap: anywhere; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+
+
+<main>
+  <p class="marca">Lume · Regra de Vida Católica</p>
+  <h1>Política de Privacidade</h1>
+  <p class="data">Última atualização: 26 de outubro de 2026</p>
+
+  <div class="resumo">
+    <p>O Lume guarda o que você escreve <strong>só no seu aparelho</strong>. Não temos servidor, não temos conta de usuário e não coletamos seus dados.</p>
+  </div>
+
+  <h2>O que fica no seu aparelho</h2>
+  <p>Perfil, regra de vida, práticas, ofertas, intenções, exame de consciência, meditações, diário, ajustes e o estado da assinatura. Nada disso é enviado a nós nem a terceiros.</p>
+
+  <h2>O que não fazemos</h2>
+  <ul>
+    <li>Não coletamos dados pessoais, de uso, de localização, de contatos, fotos ou identificadores de publicidade.</li>
+    <li>Não usamos análise de uso, rastreadores, anúncios nem ferramentas de terceiros que coletem dados.</li>
+    <li>Não vendemos nem compartilhamos informações, porque não as temos.</li>
+  </ul>
+
+  <h2>Conexões à internet</h2>
+  <ul>
+    <li><strong>Atualizações de conteúdo:</strong> o app pode baixar atualizações dos textos e do próprio app (Expo Updates). A requisição não leva seus dados pessoais.</li>
+    <li><strong>Lume+:</strong> a compra e a renovação são tratadas pela App Store ou pelo Google Play, sob a política de cada loja. Nós não recebemos seus dados de pagamento.</li>
+    <li><strong>Links externos</strong> (por exemplo, a tradução oficial da CNBB e letras de cantos) abrem no navegador, fora do Lume.</li>
+  </ul>
+
+  <h2>Notificações</h2>
+  <p>Os lembretes são <strong>locais</strong>: são agendados no próprio aparelho e não passam por servidor. Você pode desligá-los nos Ajustes ou nas configurações do sistema.</p>
+
+  <h2>Backup</h2>
+  <p>O sistema do seu celular (iCloud no iPhone, backup do Google no Android) pode guardar uma cópia do seu diário, conforme as configurações de backup que você escolheu. Essa cópia fica sob a conta e a política do iCloud ou do Google, não sob a nossa.</p>
+
+  <h2>Compartilhar</h2>
+  <p>Quando você toca em "Compartilhar", o Lume gera uma imagem no aparelho e abre a janela do sistema. Só vai adiante o que você escolher enviar, e nunca o que você escreveu.</p>
+
+  <h2>Exportar e apagar</h2>
+  <p>Nos Ajustes você pode exportar seus dados e apagá-los. Ao desinstalar o app, os dados locais são removidos do aparelho.</p>
+
+  <h2>Maiores de 18 anos</h2>
+  <p>O Lume é destinado a maiores de 18 anos.</p>
+
+  <h2>Mudanças e contato</h2>
+  <p>Se esta política mudar, a data acima será atualizada. Dúvidas: <span class="email">lumeappcatolico@gmail.com</span></p>
+
+  <footer>Lume — Regra de Vida Católica</footer>
+</main>
+
+</body>
+</html>
