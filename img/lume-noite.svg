@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A1F17"/><stop offset="1" stop-color="#120D0A"/></linearGradient>
+  <radialGradient id="bgHi" cx=".5" cy=".62" r=".55"><stop offset="0" stop-color="#FFB04A" stop-opacity=".22"/><stop offset="1" stop-color="#FFB04A" stop-opacity="0"/></radialGradient>
+  <linearGradient id="arco" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F7C77A"/><stop offset="1" stop-color="#D9893A"/></linearGradient>
+  <linearGradient id="taca" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9A257"/><stop offset="1" stop-color="#B86A25"/></linearGradient>
+  <linearGradient id="chama" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE7A8"/><stop offset=".55" stop-color="#FFAE4D"/><stop offset="1" stop-color="#F07E2E"/></linearGradient>
+  <linearGradient id="miolo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF3D1" stop-opacity=".1"/><stop offset=".6" stop-color="#FFF3D1"/><stop offset="1" stop-color="#FFE9B5"/></linearGradient>
+  <radialGradient id="halo" cx="512" cy="640" r="250" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFB04A" stop-opacity=".75"/><stop offset=".45" stop-color="#FFB04A" stop-opacity=".22"/><stop offset="1" stop-color="#FFB04A" stop-opacity="0"/></radialGradient>
+  <linearGradient id="luz" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#FFB04A" stop-opacity=".42"/><stop offset=".55" stop-color="#FFB04A" stop-opacity=".1"/><stop offset="1" stop-color="#FFB04A" stop-opacity="0"/></linearGradient>
+  <linearGradient id="vidro" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".5"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>
+  <clipPath id="dentro"><path d="M304 852V452C304 324 394 222 512 156C630 222 720 324 720 452V852Z"/></clipPath>
+  <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="22"/></filter>
+  <filter id="blurS" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9"/></filter>
+  <filter id="sombra" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#3A1E05" flood-opacity=".18"/></filter>
+</defs><path d="M0 0H1024V1024H0Z" fill="url(#bg)"/><path d="M0 0H1024V1024H0Z" fill="url(#bgHi)"/><g transform="translate(512 512) scale(1.0) translate(-512 -491)">
+
+<g clip-path="url(#dentro)"><rect x="300" y="420" width="424" height="430" fill="url(#luz)"/></g>
+<circle cx="512" cy="640" r="250" fill="url(#halo)"/>
+<path d="M304 852V452C304 324 394 222 512 156C630 222 720 324 720 452V852Z" fill="none" stroke="#FFB04A" stroke-opacity=".55" stroke-width="40" stroke-linejoin="round" filter="url(#blur)"/>
+<path d="M304 852V452C304 324 394 222 512 156C630 222 720 324 720 452V852Z" fill="none" stroke="url(#arco)" stroke-width="24" stroke-linejoin="round" stroke-linecap="round"/>
+
+<path d="M512 452C548 520 584 584 584 650C584 704 552 742 512 742C472 742 440 704 440 650C440 584 476 520 512 452Z" fill="#FFAE4D" opacity=".7" filter="url(#blur)"/>
+<g filter="url(#sombra)"><path d="M420 768H604C604 800 564 826 512 826C460 826 420 800 420 768Z" fill="url(#taca)"/></g>
+<path d="M440 776H584" stroke="#FFFFFF" stroke-opacity=".28" stroke-width="6" stroke-linecap="round"/>
+<path d="M512 452C548 520 584 584 584 650C584 704 552 742 512 742C472 742 440 704 440 650C440 584 476 520 512 452Z" fill="url(#chama)"/>
+<path d="M512 572C526 606 542 636 542 670C542 698 529 716 512 716C495 716 482 698 482 670C482 636 498 606 512 572Z" fill="url(#miolo)" filter="url(#blurS)" opacity=".6"/>
+<path d="M512 572C526 606 542 636 542 670C542 698 529 716 512 716C495 716 482 698 482 670C482 636 498 606 512 572Z" fill="url(#miolo)"/>
+</g></svg>
