@@ -247,16 +247,16 @@ if(!d.dataset.theme){d.dataset.theme=matchMedia('(prefers-color-scheme: dark)').
       </div>
       <p class="swatch-note" id="sw-nota" aria-live="polite"></p>
       <div class="facts">
-        <div class="fact"><svg viewBox="0 0 24 24"><path d="M5 4h10a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3V4zM5 17a3 3 0 0 1 3-3h10"/></svg><div><b>As leituras, completas</b><p>Tradução do Pe. Antônio Pereira de Figueiredo (domínio público), com o salmo em estrofes e o refrão.</p></div></div>
+        <div class="fact"><svg viewBox="0 0 24 24"><path d="M5 4h10a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3V4zM5 17a3 3 0 0 1 3-3h10"/></svg><div><b>As leituras, completas</b><p>Tradução do Pe. Antônio Pereira de Figueiredo, com o salmo em estrofes e o refrão.</p></div></div>
         <div class="fact"><svg viewBox="0 0 24 24"><path d="M7 17c-2 0-3-1.200-3-3 0-3 2-5.500 5-6M17 17c-2 0-3-1.200-3-3 0-3 2-5.500 5-6"/></svg><div><b>Ouvir um santo</b><p>Uma passagem de um Padre, Doutor ou do Magistério, ligada ao Evangelho do dia. Nunca um texto nosso, nunca sem fonte.</p></div></div>
-        <div class="fact"><svg viewBox="0 0 24 24"><path d="M12 3c2.500 3.400 5 6 5 9.400A5 5 0 0 1 7 12.400C7 9 9.500 6.400 12 3z"/></svg><div><b>Arte feita por mãos humanas</b><p>Gravuras de Schnorr von Carolsfeld, Dürer, Luyken e Wierix, em domínio público. Nenhuma imagem gerada por IA.</p></div></div>
+        <div class="fact"><svg viewBox="0 0 24 24"><path d="M12 3c2.500 3.400 5 6 5 9.400A5 5 0 0 1 7 12.400C7 9 9.500 6.400 12 3z"/></svg><div><b>Arte sacra de verdade</b><p>Gravuras clássicas da tradição cristã, pintadas na cor do dia. Nenhuma imagem gerada por IA.</p></div></div>
       </div>
     </div>
     <div class="rv" style="--d:.12s">
       <div class="stage">
         <div class="stage-frame">
           <div class="grav" id="stage-grav" style="--ar:560/461;--img:url(img/gravuras/schnorr-162.webp)" role="img" aria-label="Gravura"></div>
-          <div class="stage-cap"><div><b id="st-t">A Anunciação</b><span id="st-s"></span></div><a id="st-l" href="#" target="_blank" rel="noopener">Fonte</a></div>
+          <div class="stage-cap"><div><b id="st-t">A Anunciação</b><span id="st-s"></span></div></div>
         </div>
         <div class="thumbs" id="thumbs" role="group" aria-label="Escolha uma gravura"></div>
       </div>
@@ -278,7 +278,7 @@ if(!d.dataset.theme){d.dataset.theme=matchMedia('(prefers-color-scheme: dark)').
       <article class="card rv" style="--d:.16s"><div class="grav" style="--ar:16/9;--img:url(img/gravuras/durer-388137.webp)" role="img" aria-label="Gravura: o Natal do Senhor, de Dürer"></div><div class="card-b"><span class="tag free">Uma grátis</span><h3>Novenas, sozinho ou em grupo</h3><p>Nove dias por uma intenção, com o Evangelho, uma passagem dos santos e a oração universal. Em grupo, cada dia traz um canto, partilha e preces. Imaculada Conceição, Natal e Espírito Santo.</p></div></article>
       <article class="card rv"><div class="grav" style="--ar:16/9;--img:url(img/gravuras/schnorr-179.webp)" role="img" aria-label="Gravura: as bodas de Caná"></div><div class="card-b"><span class="tag free">Grátis</span><h3>Completas</h3><p>A oração da noite, em forma dominical, que pode ser rezada em qualquer dia. Ao marcar, a hora entra no seu diário.</p></div></article>
       <article class="card rv" style="--d:.08s"><div class="grav" style="--ar:16/9;--img:url(img/gravuras/durer-388014.webp)" role="img" aria-label="Gravura: a Anunciação, de Dürer"></div><div class="card-b"><span class="tag plus">Lume+</span><h3>Trilhas guiadas</h3><p>De 7, 14 ou 30 dias, com os Padres da Igreja. A primeira trilha é grátis. A do Advento, “Preparar o caminho”, tem 14 dias.</p></div></article>
-      <article class="card rv" style="--d:.16s"><div class="grav" style="--ar:16/9;--img:url(img/gravuras/mellan-392631.webp)" role="img" aria-label="Gravura: a conversão de Santo Agostinho"></div><div class="card-b"><span class="tag plus">Lume+</span><h3>Livros clássicos</h3><p>Um capítulo por vez, com espaço para “Meditar e viver”. Só obras em domínio público, com fonte e tradução registradas.</p></div></article>
+      <article class="card rv" style="--d:.16s"><div class="grav" style="--ar:16/9;--img:url(img/gravuras/mellan-392631.webp)" role="img" aria-label="Gravura: a conversão de Santo Agostinho"></div><div class="card-b"><span class="tag plus">Lume+</span><h3>Livros clássicos</h3><p>Um capítulo por vez, com espaço para “Meditar e viver”. Só textos de grandes autores, sempre com fonte.</p></div></article>
     </div>
     <p class="subhead rv">Orações para cada momento</p>
     <div class="prayer-tiles rv" id="tiles"></div>
@@ -300,7 +300,6 @@ if(!d.dataset.theme){d.dataset.theme=matchMedia('(prefers-color-scheme: dark)').
       <p class="lead">Todo dia, um Companheiro de hoje, escolhido pelo tema da liturgia, com a ficha, os momentos da vida e as palavras que deixou. A Biblioteca de santos reúne todos, e você pode fixar um companheiro por uma semana ou por um tempo litúrgico.</p>
     </div>
     <div class="saints" id="saints"></div>
-    <p class="more rv">Retratos em gravura ou fotografia de época, em domínio público, sempre com crédito.</p>
   </div>
 </section>
 
@@ -434,7 +433,7 @@ if(!d.dataset.theme){d.dataset.theme=matchMedia('(prefers-color-scheme: dark)').
       <details><summary>Preciso criar uma conta?</summary><div class="ans">Não. O Lume não tem conta nem login. Seu perfil, suas práticas e seu diário ficam no próprio aparelho.</div></details>
       <details><summary>Funciona sem internet?</summary><div class="ans">Sim. As leituras, as orações e a biblioteca vêm dentro do app. A internet só é usada para receber atualizações de conteúdo e abrir links externos.</div></details>
       <details><summary>E se eu esquecer ou perder alguns dias?</summary><div class="ans">Nada acontece. O Lume nunca mostra uma tela de falha: quando você volta, recebe uma palavra de recomeço. A Jornada até destaca quantas vezes você voltou.</div></details>
-      <details><summary>De onde vêm os textos e as imagens?</summary><div class="ans">Os textos são de obras em domínio público (Padres da Igreja, Doutores, místicos), com tradução própria a partir dos originais quando necessário, e sempre com autor e fonte. A Bíblia é a tradução do Pe. Antônio Pereira de Figueiredo. As gravuras são antigas, em domínio público, com crédito.</div></details>
+      <details><summary>De onde vêm os textos?</summary><div class="ans">Os textos são de grandes autores da tradição da Igreja (Padres, Doutores e místicos), sempre com autor e fonte. A Bíblia é a tradução do Pe. Antônio Pereira de Figueiredo. O Lume não inventa textos espirituais.</div></details>
       <details><summary>Para quem é o app?</summary><div class="ans">Para católicos adultos que falam português do Brasil e querem constância e profundidade na vida de oração. O Lume não substitui a vida sacramental, o acompanhamento espiritual nem a Confissão.</div></details>
       <details><summary>Quando posso baixar?</summary><div class="ans">Estamos finalizando o lançamento nas lojas para iPhone e Android. Assim que estiver disponível, os botões no topo desta página passam a levar direto à loja.</div></details>
       <details><summary>Encontrei um erro ou tenho uma sugestão.</summary><div class="ans">Escreva para <a href="mailto:lumeappcatolico@gmail.com">lumeappcatolico@gmail.com</a>. Toda ajuda para melhorar o app é bem-vinda, especialmente sobre textos e fontes.</div></details>
@@ -467,7 +466,7 @@ if(!d.dataset.theme){d.dataset.theme=matchMedia('(prefers-color-scheme: dark)').
       <div><h4>Explorar</h4><ul><li><a href="#app">O app</a></li><li><a href="#palavra">A Palavra de hoje</a></li><li><a href="#rezar">Rezar</a></li><li><a href="#lumeplus">Lume+ e planos</a></li></ul></div>
       <div><h4>Contato e documentos</h4><ul><li><a href="mailto:lumeappcatolico@gmail.com">lumeappcatolico@gmail.com</a></li><li><a href="privacidade/">Política de privacidade</a></li><li><a href="#perguntas">Perguntas frequentes</a></li></ul></div>
     </div>
-    <p class="credits"><b>Sobre a arte.</b> Todas as gravuras são obras antigas em domínio público, pintadas na cor litúrgica: Julius Schnorr von Carolsfeld, <i>A Bíblia em imagens</i> (1860); Albrecht Dürer, <i>Pequena Paixão</i> e <i>A vida da Virgem</i> (The Metropolitan Museum of Art, CC0); Hieronymus Wierix e a escola de Antuérpia (Rijksmuseum, CC0); Claude Mellan, <i>Santo Agostinho</i> (The Met, CC0). Retratos fotográficos em domínio público (ou CC0). O app traz o crédito completo de cada imagem em Ajustes. © 2026 Lume.</p>
+    <p class="credits">Gravuras clássicas da tradição cristã; o app traz o crédito de cada imagem em Ajustes. © 2026 Lume.</p>
   </div>
 </footer>
 

@@ -162,7 +162,7 @@
 
   /* ---------- Galeria de gravuras ---------- */
   var ARTE = window.LUME_ARTE || { cenas: [], santos: [] };
-  var st = { g: $('#stage-grav'), t: $('#st-t'), s: $('#st-s'), l: $('#st-l'), th: $('#thumbs') }, atual = 0, interagiu = false, timer;
+  var st = { g: $('#stage-grav'), t: $('#st-t'), s: $('#st-s'), th: $('#thumbs') }, atual = 0, interagiu = false, timer;
   function url(id) { return 'url(img/gravuras/' + id + '.webp)'; }
   ARTE.cenas.forEach(function (c, i) {
     var b = d.createElement('button'); b.type = 'button'; b.className = 'thumb'; b.style.setProperty('--img', url(c.id)); b.setAttribute('aria-label', c.titulo);
@@ -174,8 +174,7 @@
     setTimeout(function () {
       st.g.style.setProperty('--ar', c.w + '/' + c.h); st.g.style.setProperty('--img', url(c.id)); st.g.setAttribute('aria-label', 'Gravura: ' + c.titulo);
       st.t.textContent = c.titulo;
-      st.s.textContent = c.artista + ' · ' + c.ano + (c.refs && c.refs[0] ? ' · ' + c.refs[0] : '');
-      st.l.href = c.fonte; st.l.textContent = c.licenca && /CC0/.test(c.licenca) ? 'Fonte · CC0' : 'Fonte · domínio público';
+      st.s.textContent = c.refs && c.refs[0] ? c.refs[0] : '';
       st.g.classList.remove('swap');
     }, reduzir ? 0 : 220);
     $$('.thumb', st.th).forEach(function (t, k) { if (k === i) { t.setAttribute('aria-current', 'true'); var r = t.getBoundingClientRect(), pr = st.th.getBoundingClientRect(); if (r.left < pr.left || r.right > pr.right) st.th.scrollTo({ left: t.offsetLeft - st.th.clientWidth / 2 + 32, behavior: reduzir ? 'auto' : 'smooth' }); } else t.removeAttribute('aria-current'); });
@@ -192,7 +191,7 @@
   var sg = $('#saints');
   ARTE.santos.forEach(function (s, i) {
     var f = d.createElement('figure'); f.className = 'saint hov rv'; f.style.setProperty('--d', ((i % 6) * 0.05) + 's');
-    f.innerHTML = '<div class="grav" role="img" aria-label="' + s.titulo + '" title="' + (s.artista || '') + (s.ano ? ' · ' + s.ano : '') + '"></div><figcaption>' + s.titulo.replace(/ \(.*\)/, '') + '</figcaption>';
+    f.innerHTML = '<div class="grav" role="img" aria-label="' + s.titulo + '"></div><figcaption>' + s.titulo.replace(/ \(.*\)/, '') + '</figcaption>';
     var g = f.firstChild; g.style.setProperty('--ar', s.w + '/' + s.h); g.style.setProperty('--img', url(s.id));
     sg.appendChild(f); if (window.IntersectionObserver) { ro.observe(f); } else { f.classList.add('in'); }
   });
