@@ -1,4 +1,4 @@
-/* Lume — site. Sem rastreadores, sem requisições externas. */
+/* Lume - site. Sem rastreadores, sem requisições externas. */
 (function () {
   'use strict';
   var d = document, root = d.documentElement;
@@ -139,11 +139,11 @@
 
   /* Exame de consciência: demonstração em 5 passos (Santo Inácio) */
   var PASSOS = [
-    ['Agradecer', 'Comece pelo que recebeu.', '“Hoje agradeço por…” — em poucas palavras, no seu tempo. É opcional.'],
+    ['Agradecer', 'Comece pelo que recebeu.', '“Hoje agradeço por…” - em poucas palavras, no seu tempo. É opcional.'],
     ['Pedir luz', 'Peça ao Espírito Santo.', 'Uma oração curta ao Espírito Santo e um instante de silêncio, antes de olhar o dia.'],
     ['Rever o dia', 'Olhe o dia com calma.', 'O propósito da manhã, com <b>Vivi</b>, <b>Em parte</b> ou <b>Esqueci</b>, mais duas perguntas do exame. Cada resposta recebe uma palavra de misericórdia, nunca de cobrança.', true],
     ['Pedir perdão', 'Entregue o que ficou.', 'Ato de contrição. E, se houver pecado grave, procure a Confissão.'],
-    ['Propor', 'Olhe para amanhã.', '“Com a graça de Deus, amanhã eu…” — um propósito pequeno, se quiser.']
+    ['Propor', 'Olhe para amanhã.', '“Com a graça de Deus, amanhã eu…” - um propósito pequeno, se quiser.']
   ];
   function exame(i) {
     var h;
