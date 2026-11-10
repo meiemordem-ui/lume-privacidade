@@ -7,7 +7,7 @@
   var reduzir = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---------- Lojas (preencher quando o app for publicado) ---------- */
-  var LOJAS = { ios: '', android: '' };
+  var LOJAS = { ios: 'https://apps.apple.com/app/id6828948510', android: '' };
   $$('[data-loja]').forEach(function (a) {
     var url = LOJAS[a.dataset.loja];
     if (url) { a.href = url; a.classList.remove('soon'); a.removeAttribute('aria-disabled'); a.target = '_blank'; a.rel = 'noopener'; }
