@@ -1,479 +1,115 @@
 <!doctype html>
-<html lang="pt-BR" class="no-js" data-cor="verde">
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Lume - Regra de Vida Católica</title>
-<meta name="description" content="O Lume ajuda você a viver uma Regra de Vida católica um dia de cada vez: liturgia do dia, palavras dos santos, orações, exame de consciência e caridade. Sem conta, sem anúncios, tudo no seu aparelho.">
-<meta name="theme-color" content="#F4EFE6" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#16120E" media="(prefers-color-scheme: dark)">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<link rel="canonical" href="https://meiemordem-ui.github.io/lume-privacidade/">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="pt_BR">
-<meta property="og:title" content="Lume - Regra de Vida Católica">
-<meta property="og:description" content="Liturgia do dia, palavras dos santos, oração e caridade num só lugar. Sem pontos, sem ranking e sem culpa.">
-<meta property="og:image" content="https://meiemordem-ui.github.io/lume-privacidade/img/og.jpg">
-<meta property="og:url" content="https://meiemordem-ui.github.io/lume-privacidade/">
-<meta name="twitter:card" content="summary_large_image">
+<title>Política de Privacidade do Lume</title>
 <link rel="icon" href="favicon.png" type="image/png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preload" href="fonts/cormorant-garamond-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="canonical" href="https://meiemordem-ui.github.io/lume-privacidade/">
 <link rel="preload" href="fonts/source-serif-4-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="site.css?v=4">
-<script>
-/* Tema e cor antes da pintura (sem flash). Tudo opcional e só neste aparelho. */
-(function(){var d=document.documentElement;d.classList.remove('no-js');
-try{var t=localStorage.getItem('lume-tema');if(t==='claro'||t==='escuro'){d.dataset.theme=t==='escuro'?'dark':'light'}}catch(e){}
-if(!d.dataset.theme){d.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}})();
-</script>
+<style>
+@font-face{font-family:"Cormorant Garamond";font-weight:600;font-style:normal;font-display:swap;src:url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Source Serif 4";font-weight:400;font-style:normal;font-display:swap;src:url(fonts/source-serif-4-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Source Serif 4";font-weight:600;font-style:normal;font-display:swap;src:url(fonts/source-serif-4-latin-600-normal.woff2) format("woff2")}
+/* Layout: coluna única de leitura, no tom monástico do app (creme, âmbar, serifa). */
+:root {
+  --bg: #F4EFE6;
+  --fg: #2A2420;
+  --muted: #6B5F55;
+  --line: #E2D8C8;
+  --accent: #A9520E;
+  --card: #FBF8F2;
+  --f-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --f-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #16120E; --fg: #F2EADD; --muted: #B9AC9C; --line: #3A3027; --accent: #E9A257; --card: #211B15;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #16120E; --fg: #F2EADD; --muted: #B9AC9C; --line: #3A3027; --accent: #E9A257; --card: #211B15;
+  color-scheme: dark;
+}
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--f-body);
+  font-size: 17px;
+  line-height: 1.65;
+  padding-block: 40px 56px;
+  margin: 0;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+main { max-width: 40rem; margin: 0 auto; min-width: 0; }
+.marca { font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin: 0 0 12px; }
+h1 { font-family: var(--f-display); font-weight: 600; font-size: clamp(2rem, 6vw, 2.6rem); line-height: 1.1; margin: 0 0 8px; text-wrap: balance; }
+.data { color: var(--muted); font-size: 15px; margin: 0 0 28px; }
+.resumo { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 16px 18px; margin: 0 0 8px; }
+.resumo p { margin: 0; }
+h2 { font-family: var(--f-display); font-weight: 600; font-size: 1.5rem; line-height: 1.2; margin: 34px 0 8px; text-wrap: balance; }
+p, ul { margin: 0 0 12px; }
+ul { padding-left: 1.2em; }
+li { margin-bottom: 6px; }
+a { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.email { font-weight: 600; overflow-wrap: anywhere; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+</style>
 </head>
 <body>
-<a class="skip" href="#conteudo">Ir para o conteúdo</a>
 
-<!-- Sprite: lâmpada no nicho (desenho do ícone do app) -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <defs>
-    <linearGradient id="sArco" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D07A1E"/><stop offset="1" stop-color="#A9520E"/></linearGradient>
-    <linearGradient id="sTaca" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C7671A"/><stop offset="1" stop-color="#94450C"/></linearGradient>
-    <linearGradient id="sChama" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD68A"/><stop offset=".55" stop-color="#F29A3E"/><stop offset="1" stop-color="#E2742A"/></linearGradient>
-    <symbol id="lampada" viewBox="0 0 100 124">
-      <path d="M16.5 118V53.6C16.5 33 31 16.6 50 5.9C69 16.6 83.5 33 83.5 53.6V118Z" fill="none" stroke="url(#sArco)" stroke-width="5" stroke-linejoin="round"/>
-      <path d="M35.2 104.5H64.8C64.8 109.6 58.4 113.8 50 113.8C41.6 113.8 35.2 109.6 35.2 104.5Z" fill="url(#sTaca)"/>
-      <path d="M50 62.9C54.6 71.7 59.3 80 59.3 88.5C59.3 95.4 55.1 100.3 50 100.3C44.9 100.3 40.7 95.4 40.7 88.5C40.7 80 45.4 71.7 50 62.9Z" fill="url(#sChama)"/>
-      <path d="M50 78.4C51.8 82.8 53.9 89.3 53.9 91C53.9 94.6 52.2 96.9 50 96.9C47.8 96.9 46.1 94.6 46.1 91C46.1 89.3 48.2 82.8 50 78.4Z" fill="#FFE9B5"/>
-    </symbol>
-  </defs>
-</svg>
 
-<header class="hdr" id="topo">
-  <div class="wrap">
-    <a class="brand" href="#topo" aria-label="Lume, início"><svg aria-hidden="true"><use href="#lampada"/></svg><span>Lume</span></a>
-    <nav class="nav" id="nav" aria-label="Principal">
-      <a href="#app">O app</a>
-      <a href="#palavra">Palavra</a>
-      <a href="#rezar">Rezar</a>
-      <a href="#santos">Santos</a>
-      <a href="#lumeplus">Lume+</a>
-      <a href="#perguntas">Perguntas</a>
-    </nav>
-    <div class="hdr-tools">
-      <button class="icon-btn" id="tema" type="button" aria-label="Alternar claro e escuro" title="Claro / escuro">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path class="sun" d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-      </button>
-      <a class="btn" href="#baixar">Baixar</a>
-      <button class="icon-btn burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
-    </div>
+<main>
+  <p class="marca"><a href="https://meiemordem-ui.github.io/lume-site/" style="text-decoration:none">← Voltar ao site do Lume</a></p>
+  <p class="marca">Lume · Regra de Vida Católica</p>
+  <h1>Política de Privacidade</h1>
+  <p class="data">Última atualização: 26 de outubro de 2026</p>
+
+  <div class="resumo">
+    <p>O Lume guarda o que você escreve <strong>só no seu aparelho</strong>. Não temos servidor, não temos conta de usuário e não coletamos seus dados pessoais.</p>
   </div>
-  <div class="progress" id="progress" aria-hidden="true"></div>
-</header>
 
-<main id="conteudo">
+  <h2>O que fica no seu aparelho</h2>
+  <p>Perfil, regra de vida, práticas, ofertas, intenções, exame de consciência, meditações, diário, ajustes e o estado da assinatura. Nada disso é enviado a nós nem a terceiros.</p>
 
-<!-- HERO -->
-<section class="hero" id="inicio" aria-labelledby="h-hero">
-  <div class="hero-bg" aria-hidden="true"><div class="grav-bg" style="--ar:560/461;--img:url(img/gravuras/schnorr-195.webp)"></div></div>
-  <div class="wrap hero-grid">
-    <div>
-      <p class="today rv" id="hoje"><span class="dot"></span><span id="hoje-txt">Regra de Vida Católica</span></p>
-      <h1 id="h-hero" class="rv" style="--d:.05s">Sua Regra de Vida, <em>um dia de cada vez.</em></h1>
-      <p class="lead rv" style="--d:.12s">O Lume reúne a liturgia do dia, as palavras dos santos, a oração e a caridade num só lugar, para você levar a fé do domingo para a semana toda. Sem pontos, sem ranking e sem culpa.</p>
-      <div class="cta-row rv" id="baixar" style="--d:.2s">
-        <a class="store soon" href="#baixar" data-loja="ios" aria-disabled="true"><span><small>Baixar na</small><strong>App Store</strong></span></a>
-        <a class="store soon" href="#baixar" data-loja="android" aria-disabled="true"><span><small>Disponível no</small><strong>Google Play</strong></span></a>
-      </div>
-      <p class="hero-note rv" style="--d:.28s"><span>Gratuito para começar</span><span>Sem conta</span><span>Funciona offline</span><span>iPhone e Android</span></p>
-    </div>
+  <h2>O que não fazemos</h2>
+  <ul>
+    <li>Não coletamos dados pessoais, de uso, de localização, de contatos, fotos ou identificadores de publicidade.</li>
+    <li>Não usamos análise de uso, rastreadores, anúncios nem ferramentas de terceiros que coletem dados.</li>
+    <li>Não vendemos nem compartilhamos informações, porque não as temos.</li>
+  </ul>
 
-    <div class="hero-demo rv" style="--d:.15s">
-      <div class="nicho">
-        <svg id="lamp" viewBox="0 0 100 124" role="img" aria-label="Lâmpada com 0 de 4 práticas vividas hoje">
-          <defs>
-            <linearGradient id="hArco" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--arc1)"/><stop offset="1" style="stop-color:var(--arc2)"/></linearGradient>
-            <linearGradient id="hTaca" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--taca1)"/><stop offset="1" style="stop-color:var(--taca2)"/></linearGradient>
-            <linearGradient id="hChama" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD68A"/><stop offset=".55" stop-color="#F29A3E"/><stop offset="1" stop-color="#E2742A"/></linearGradient>
-            <linearGradient id="hMiolo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF3D1" stop-opacity=".1"/><stop offset=".6" stop-color="#FFF3D1"/><stop offset="1" stop-color="#FFE9B5"/></linearGradient>
-            <linearGradient id="hLuz" x1="0" y1="1" x2="0" y2="0"><stop offset="0" style="stop-color:var(--accent);stop-opacity:.34"/><stop offset="1" style="stop-color:var(--accent);stop-opacity:.1"/></linearGradient>
-            <radialGradient id="hHalo" cx="50" cy="86" r="40" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFB85C" stop-opacity=".75"/><stop offset=".45" stop-color="#FFB85C" stop-opacity=".22"/><stop offset="1" stop-color="#FFB85C" stop-opacity="0"/></radialGradient>
-            <radialGradient id="hBril" cx="50" cy="86" r="22" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#F29A3E" stop-opacity=".8"/><stop offset="1" stop-color="#F29A3E" stop-opacity="0"/></radialGradient>
-            <clipPath id="hDentro"><path d="M16.5 118V53.6C16.5 33 31 16.6 50 5.9C69 16.6 83.5 33 83.5 53.6V118Z"/></clipPath>
-          </defs>
-          <path class="brilho-arco" d="M16.5 118V53.6C16.5 33 31 16.6 50 5.9C69 16.6 83.5 33 83.5 53.6V118Z" fill="none" stroke="#FFB04A" stroke-width="6" stroke-linejoin="round" style="opacity:var(--arc-glow,0)"/>
-          <g clip-path="url(#hDentro)">
-            <rect class="luz" id="lamp-luz" x="14" y="22" width="72" height="96" fill="url(#hLuz)"/>
-            <rect class="luz" id="lamp-luz-top" x="14" y="22" width="72" height=".8" style="fill:var(--accent);opacity:.6"/>
-          </g>
-          <circle class="halo" id="lamp-halo" cx="50" cy="86" r="40" fill="url(#hHalo)" opacity=".3"/>
-          <path d="M16.5 118V53.6C16.5 33 31 16.6 50 5.9C69 16.6 83.5 33 83.5 53.6V118Z" fill="none" stroke="url(#hArco)" stroke-width="2.2" stroke-linejoin="round"/>
-          <path d="M35.2 104.5H64.8C64.8 109.6 58.4 113.8 50 113.8C41.6 113.8 35.2 109.6 35.2 104.5Z" fill="url(#hTaca)"/>
-          <path d="M38.5 105.9H61.5" stroke="#fff" stroke-opacity=".28" stroke-width=".7" stroke-linecap="round"/>
-          <g class="flama-wrap" id="lamp-chama">
-            <g class="flama">
-              <ellipse cx="50" cy="86" rx="14" ry="20" fill="url(#hBril)"/>
-              <path d="M50 62.9C54.6 71.7 59.3 80 59.3 88.5C59.3 95.4 55.1 100.3 50 100.3C44.9 100.3 40.7 95.4 40.7 88.5C40.7 80 45.4 71.7 50 62.9Z" fill="url(#hChama)"/>
-              <path d="M50 78.4C51.8 82.8 53.9 89.3 53.9 91C53.9 94.6 52.2 96.9 50 96.9C47.8 96.9 46.1 94.6 46.1 91C46.1 89.3 48.2 82.8 50 78.4Z" fill="url(#hMiolo)"/>
-            </g>
-          </g>
-        </svg>
-      </div>
-      <div class="meter" role="group" aria-labelledby="m-h">
-        <h3 id="m-h">Sua lâmpada hoje <b id="m-n">0 de 4</b></h3>
-        <p id="m-t" aria-live="polite">A chama já está acesa: a graça chega primeiro. Cada prática acrescenta óleo.</p>
-        <div class="chips">
-          <button class="chip" type="button" aria-pressed="false" data-p="Oferecer">Oferecer</button>
-          <button class="chip" type="button" aria-pressed="false" data-p="Palavra">Palavra</button>
-          <button class="chip" type="button" aria-pressed="false" data-p="Práticas">Práticas</button>
-          <button class="chip" type="button" aria-pressed="false" data-p="Exame">Exame</button>
-        </div>
-      </div>
-      <p class="demo-hint">Toque nas práticas e veja a luz subir. No app é assim, todo dia: a luz sobe, não salta.</p>
-    </div>
-  </div>
-</section>
+  <h2>Conexões à internet</h2>
+  <ul>
+    <li><strong>Atualizações de conteúdo:</strong> o app pode baixar atualizações dos textos e do próprio app (Expo Updates). Para entregar a atualização, o app envia ao serviço de atualizações (Expo) um identificador anônimo da instalação, gerado aleatoriamente, que não está ligado a você, ao seu nome nem ao seu diário. Nenhum dado pessoal é enviado.</li>
+    <li><strong>Lume+:</strong> a compra e a renovação são tratadas pela App Store ou pelo Google Play, sob a política de cada loja. Nós não recebemos seus dados de pagamento.</li>
+    <li><strong>Links externos</strong> (por exemplo, a tradução oficial da CNBB e letras de cantos) abrem no navegador, fora do Lume.</li>
+  </ul>
 
-<!-- A IDEIA -->
-<section id="ideia" class="band" aria-labelledby="h-ideia">
-  <div class="wrap">
-    <div class="sec-head center rv">
-      <p class="eyebrow">A ideia</p>
-      <h2 class="h2" id="h-ideia">Alimento, estrutura e fruto</h2>
-      <p class="lead">O Lume foi pensado para católicos leigos que querem profundidade e constância, mas têm dificuldade de levar a fé do domingo para a segunda-feira. A imagem do nome é a lâmpada das virgens prudentes (Mt 25): o óleo se guarda aos poucos, dia após dia, e a chama é graça.</p>
-    </div>
-    <div class="trio">
-      <article class="pillar rv">
-        <div class="grav" style="--ar:16/10;--img:url(img/gravuras/schnorr-196.webp)" role="img" aria-label="Gravura: Marta e Maria"></div>
-        <div class="pillar-body"><small>1 · Alimento</small><h3>A Palavra e os santos</h3><p>O Evangelho do dia em texto completo e uma passagem direta de um santo, ligada à liturgia, sempre com a fonte.</p></div>
-      </article>
-      <article class="pillar rv" style="--d:.1s">
-        <div class="grav" style="--ar:16/10;--img:url(img/gravuras/durer-387407.webp)" role="img" aria-label="Gravura: a Última Ceia, de Dürer"></div>
-        <div class="pillar-body"><small>2 · Estrutura</small><h3>Uma Regra de Vida</h3><p>Práticas de piedade, ascese e caridade, no seu ritmo, com lembretes gentis. Menos, e vivido de verdade.</p></div>
-      </article>
-      <article class="pillar rv" style="--d:.2s">
-        <div class="grav" style="--ar:16/10;--img:url(img/gravuras/schnorr-197.webp)" role="img" aria-label="Gravura: o bom samaritano"></div>
-        <div class="pillar-body"><small>3 · Fruto</small><h3>A caridade concreta</h3><p>Cada sacrifício é oferecido “por quem?”, e a missão da semana leva a oração a um gesto real de serviço.</p></div>
-      </article>
-    </div>
-    <p class="verse rv">O Lume não é um refúgio do mundo, é um <span>centro de treino</span> para voltar a ele.</p>
-  </div>
-</section>
+  <h2>Notificações</h2>
+  <p>Os lembretes são <strong>locais</strong>: são agendados no próprio aparelho e não passam por servidor. Você pode desligá-los nos Ajustes ou nas configurações do sistema.</p>
 
-<!-- O APP -->
-<section id="app" aria-labelledby="h-app">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <p class="eyebrow">O app</p>
-      <h2 class="h2" id="h-app">Um dia no Lume</h2>
-      <p class="lead">Poucos minutos em três momentos: oferecer o dia, viver a Palavra e as práticas, e encerrar com o exame. É só isso.</p>
-    </div>
-    <div class="day rv">
-      <div><div class="t"><svg viewBox="0 0 24 24"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>De manhã</div><h3>Oferecer o dia</h3><p>Uma oração curta de oferecimento e a pergunta “Hoje, por quem?”. A intenção do dia acompanha todas as suas ofertas.</p></div>
-      <div><div class="t"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Ao longo do dia</div><h3>A Palavra e as práticas</h3><p>Ler, ouvir um santo, meditar e propor um propósito. Depois, o checklist da sua Regra e a missão da semana.</p></div>
-      <div><div class="t"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>À noite</div><h3>O exame de consciência</h3><p>Cinco passos de Santo Inácio, sem nota. Termina com a bênção das Completas e um “Boa noite” sereno.</p></div>
-    </div>
+  <h2>Backup</h2>
+  <p>O sistema do seu celular (iCloud no iPhone, backup do Google no Android) pode guardar uma cópia do seu diário, conforme as configurações de backup que você escolheu. Essa cópia fica sob a conta e a política do iCloud ou do Google, não sob a nossa.</p>
 
-    <div class="tour">
-      <div class="rv">
-        <div class="tabbar" role="tablist" aria-label="Abas do app">
-          <button class="tab" role="tab" id="tab-hoje" aria-controls="p-hoje" aria-selected="true" data-tab="hoje"><svg viewBox="0 0 24 24"><path d="M12 3c3.5 4.2 6 7.2 6 10.2A6 6 0 0 1 6 13.2C6 10.2 8.5 7.2 12 3z"/><path d="M12 12.5c1.2 1.5 2 2.6 2 3.7a2 2 0 0 1-4 0c0-1.100.8-2.200 2-3.700z"/></svg>Hoje</button>
-          <button class="tab" role="tab" id="tab-exame" aria-controls="p-exame" aria-selected="false" tabindex="-1" data-tab="exame"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>Exame</button>
-          <button class="tab" role="tab" id="tab-caminhos" aria-controls="p-caminhos" aria-selected="false" tabindex="-1" data-tab="caminhos"><svg viewBox="0 0 24 24"><path d="M12 2.5v6M9.500 5h5M5 21.500l5.500-11M19 21.500l-5.500-11M8.200 16h7.600"/></svg>Caminhos</button>
-          <button class="tab" role="tab" id="tab-jornada" aria-controls="p-jornada" aria-selected="false" tabindex="-1" data-tab="jornada"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="14" rx="2"/><path d="M4 10.500h16M8 3.500v4M16 3.500v4"/></svg>Jornada</button>
-        </div>
+  <h2>Compartilhar</h2>
+  <p>Quando você toca em "Compartilhar", o Lume gera uma imagem no aparelho e abre a janela do sistema. Só vai adiante o que você escolher enviar, e nunca o que você escreveu.</p>
 
-        <div class="panel" role="tabpanel" id="p-hoje" aria-labelledby="tab-hoje">
-          <h3>Hoje, tudo num só lugar</h3>
-          <p>A lâmpada no nicho mostra o seu dia, e o app veste a cor litúrgica do dia. Tudo o que importa cabe numa tela só.</p>
-          <ul class="ticks">
-            <li><span><b>Oferecer o dia</b> com a intenção de hoje.</span></li>
-            <li><span><b>A Palavra em quatro passos:</b> Ler, Ouvir um santo, Meditar e Viver.</span></li>
-            <li><span><b>Companheiro de hoje:</b> um santo, com gravura, para caminhar com você.</span></li>
-            <li><span><b>Minhas práticas</b> em Piedade, Ascese e Caridade, e a missão da semana.</span></li>
-          </ul>
-        </div>
-        <div class="panel" role="tabpanel" id="p-exame" aria-labelledby="tab-exame" hidden>
-          <h3>Um exame sem nota</h3>
-          <p>Cinco passos de Santo Inácio (Exercícios Espirituais, 43), um de cada vez. É reflexão, não avaliação: cada resposta recebe uma palavra de misericórdia, nunca de cobrança. Toque no celular ao lado para percorrer.</p>
-          <ul class="ticks">
-            <li><span>Há também um exame <b>pelos Dez Mandamentos</b>, para a preparação da Confissão.</span></li>
-            <li><span>Se o dia virar de madrugada, o exame ainda é do dia anterior (até as 2h).</span></li>
-          </ul>
-        </div>
-        <div class="panel" role="tabpanel" id="p-caminhos" aria-labelledby="tab-caminhos" hidden>
-          <h3>Caminhos para rezar e caminhar</h3>
-          <p>O que você começa e vive nos próximos dias: o Rosário do dia, orações para cada momento, novenas, trilhas guiadas, livros e a Biblioteca de santos.</p>
-          <ul class="ticks">
-            <li><span><b>Em andamento:</b> a próxima novena ou trilha, com o dia certo de rezar.</span></li>
-            <li><span><b>Orações</b> para cada hora, com latim em muitas delas.</span></li>
-            <li><span><b>Livros</b> clássicos da espiritualidade, um capítulo por vez.</span></li>
-          </ul>
-        </div>
-        <div class="panel" role="tabpanel" id="p-jornada" aria-labelledby="tab-jornada" hidden>
-          <h3>Sua jornada, comparada só com você</h3>
-          <p>Um calendário com intensidade suave, o diário de cada dia e o cartão “Abertura à graça”, que compara o seu mês apenas com o seu próprio mês anterior.</p>
-          <ul class="ticks">
-            <li><span>Sem número de sequência e sem “você falhou”: a Jornada destaca os <b>recomeços</b>.</span></li>
-            <li><span>Tudo o que você escreve fica <b>só no seu aparelho</b>.</span></li>
-          </ul>
-        </div>
-      </div>
+  <h2>Exportar e apagar</h2>
+  <p>Nos Ajustes você pode exportar seus dados e apagá-los. Ao desinstalar o app, os dados locais são removidos do aparelho.</p>
 
-      <div class="rv" style="--d:.1s">
-        <div class="phones" id="phones">
-          <span class="glow" aria-hidden="true"></span>
-          <div class="phone a" id="ph-a"><img src="img/app/captura-1.webp" width="480" height="1091" alt="Tela Hoje do Lume com a lâmpada no nicho, o tempo litúrgico e as práticas do dia" loading="lazy"></div>
-          <div class="phone b" id="ph-b"><img src="img/app/captura-2.webp" width="480" height="1091" alt="Tela da Palavra de hoje com gravura e o Evangelho" loading="lazy"></div>
-          <div class="exame" id="exame-demo" hidden aria-label="Demonstração do exame de consciência"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  <h2>Maiores de 18 anos</h2>
+  <p>O Lume é destinado a maiores de 18 anos.</p>
 
-<!-- PALAVRA -->
-<section id="palavra" class="band" aria-labelledby="h-pal">
-  <div class="wrap pal">
-    <div class="rv">
-      <p class="eyebrow">A Palavra de hoje</p>
-      <h2 class="h2" id="h-pal">Com fonte, com arte sacra, na cor do dia</h2>
-      <p class="lead">Toda manhã, o Evangelho e as leituras em texto completo, uma passagem direta de um santo e uma gravura antiga, pintada na cor litúrgica. Toque nas cores e veja o site se vestir como o app.</p>
-      <div class="swatches" id="swatches" role="group" aria-label="Cor litúrgica">
-        <button class="sw" type="button" data-c="verde" style="--c:#3F6B3A" aria-pressed="true"><i></i>Verde</button>
-        <button class="sw" type="button" data-c="roxo" style="--c:#5B3A78" aria-pressed="false"><i></i>Roxo</button>
-        <button class="sw" type="button" data-c="rosa" style="--c:#D98BA3" aria-pressed="false"><i></i>Rosa</button>
-        <button class="sw" type="button" data-c="branco" style="--c:#E4C783" aria-pressed="false"><i></i>Branco</button>
-        <button class="sw" type="button" data-c="vermelho" style="--c:#A32626" aria-pressed="false"><i></i>Vermelho</button>
-      </div>
-      <p class="swatch-note" id="sw-nota" aria-live="polite"></p>
-      <div class="facts">
-        <div class="fact"><svg viewBox="0 0 24 24"><path d="M5 4h10a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3V4zM5 17a3 3 0 0 1 3-3h10"/></svg><div><b>As leituras, completas</b><p>Tradução do Pe. Antônio Pereira de Figueiredo, com o salmo em estrofes e o refrão.</p></div></div>
-        <div class="fact"><svg viewBox="0 0 24 24"><path d="M7 17c-2 0-3-1.200-3-3 0-3 2-5.500 5-6M17 17c-2 0-3-1.200-3-3 0-3 2-5.500 5-6"/></svg><div><b>Ouvir um santo</b><p>Uma passagem de um Padre, Doutor ou do Magistério, ligada ao Evangelho do dia. Nunca um texto nosso, nunca sem fonte.</p></div></div>
-        <div class="fact"><svg viewBox="0 0 24 24"><path d="M12 3c2.500 3.400 5 6 5 9.400A5 5 0 0 1 7 12.400C7 9 9.500 6.400 12 3z"/></svg><div><b>Arte sacra de verdade</b><p>Gravuras clássicas da tradição cristã, pintadas na cor do dia. Nenhuma imagem gerada por IA.</p></div></div>
-      </div>
-    </div>
-    <div class="rv" style="--d:.12s">
-      <div class="stage">
-        <div class="stage-frame">
-          <div class="grav" id="stage-grav" style="--ar:560/461;--img:url(img/gravuras/schnorr-162.webp)" role="img" aria-label="Gravura"></div>
-          <div class="stage-cap"><div><b id="st-t">A Anunciação</b><span id="st-s"></span></div></div>
-        </div>
-        <div class="thumbs" id="thumbs" role="group" aria-label="Escolha uma gravura"></div>
-      </div>
-    </div>
-  </div>
-</section>
+  <h2>Mudanças e contato</h2>
+  <p>Se esta política mudar, a data acima será atualizada. Dúvidas: <span class="email">lumeappcatolico@gmail.com</span></p>
 
-<!-- REZAR -->
-<section id="rezar" aria-labelledby="h-rez">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <p class="eyebrow">Rezar e aprofundar</p>
-      <h2 class="h2" id="h-rez">Orações, novenas e livros para cada momento</h2>
-      <p class="lead">Quando você quiser ir além do dia, os Caminhos estão ali: tradição viva da Igreja, sem pressa e sem propaganda.</p>
-    </div>
-    <div class="cards" id="cards-rezar">
-      <article class="card rv"><div class="grav" style="--ar:16/9;--img:url(img/gravuras/durer-388130.webp)" role="img" aria-label="Gravura: a Virgem sobre a lua crescente, de Dürer"></div><div class="card-b"><span class="tag free">Grátis</span><h3>O Santo Rosário</h3><p>Os mistérios do dia, uma tela por parte, com a gravura do mistério, a referência bíblica, o fruto e as contas para tocar. Ao final, marque o Terço na sua regra.</p></div></article>
-      <article class="card rv" style="--d:.08s"><div class="grav" style="--ar:16/9;--img:url(img/gravuras/durer-387435.webp)" role="img" aria-label="Gravura: Pentecostes, de Dürer"></div><div class="card-b"><span class="tag free">Grátis</span><h3>Orações para cada momento</h3><p>De sempre, ao começar o dia, da noite, Apostolado da Oração (com a intenção do Papa do mês), Nossa Senhora, Espírito Santo e Eucaristia, santos e anjos, à mesa. Em muitas, o latim ao lado.</p></div></article>
-      <article class="card rv" style="--d:.16s"><div class="grav" style="--ar:16/9;--img:url(img/gravuras/durer-388137.webp)" role="img" aria-label="Gravura: o Natal do Senhor, de Dürer"></div><div class="card-b"><span class="tag free">Uma grátis</span><h3>Novenas, sozinho ou em grupo</h3><p>Nove dias por uma intenção, com o Evangelho, uma passagem dos santos e a oração universal. Em grupo, cada dia traz um canto, partilha e preces. Imaculada Conceição, Natal e Espírito Santo.</p></div></article>
-      <article class="card rv"><div class="grav" style="--ar:16/9;--img:url(img/gravuras/schnorr-179.webp)" role="img" aria-label="Gravura: as bodas de Caná"></div><div class="card-b"><span class="tag free">Grátis</span><h3>Completas</h3><p>A oração da noite, em forma dominical, que pode ser rezada em qualquer dia. Ao marcar, a hora entra no seu diário.</p></div></article>
-      <article class="card rv" style="--d:.08s"><div class="grav" style="--ar:16/9;--img:url(img/gravuras/durer-388014.webp)" role="img" aria-label="Gravura: a Anunciação, de Dürer"></div><div class="card-b"><span class="tag plus">Lume+</span><h3>Trilhas guiadas</h3><p>De 7, 14 ou 30 dias, com os Padres da Igreja. A primeira trilha é grátis. A do Advento, “Preparar o caminho”, tem 14 dias.</p></div></article>
-      <article class="card rv" style="--d:.16s"><div class="grav" style="--ar:16/9;--img:url(img/gravuras/mellan-392631.webp)" role="img" aria-label="Gravura: a conversão de Santo Agostinho"></div><div class="card-b"><span class="tag plus">Lume+</span><h3>Livros clássicos</h3><p>Um capítulo por vez, com espaço para “Meditar e viver”. Só textos de grandes autores, sempre com fonte.</p></div></article>
-    </div>
-    <p class="subhead rv">Orações para cada momento</p>
-    <div class="prayer-tiles rv" id="tiles"></div>
-    <p class="subhead rv">Na estante</p>
-    <div class="books rv">
-      <div class="book"><div class="grav" style="--ar:3/4;--img:url(img/gravuras/durer-388060.webp)" role="img" aria-label="Crucifixão de Dürer"></div><div><b>Imitação de Cristo</b><span>Tomás de Kempis · 4 livros</span></div></div>
-      <div class="book"><div class="grav" style="--ar:3/4;--img:url(img/gravuras/mellan-392631.webp)" role="img" aria-label="A conversão de Santo Agostinho"></div><div><b>Confissões</b><span>Santo Agostinho · 13 livros</span></div></div>
-      <div class="book"><div class="grav" style="--ar:3/4;--img:url(img/gravuras/santo-teresinha.webp)" role="img" aria-label="Santa Teresinha"></div><div><b>História de uma Alma</b><span>Santa Teresinha · 12 capítulos</span></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- SANTOS -->
-<section id="santos" class="band" aria-labelledby="h-san">
-  <div class="wrap">
-    <div class="sec-head center rv">
-      <p class="eyebrow">Companheiros</p>
-      <h2 class="h2" id="h-san">Mais de sessenta santos para caminhar com você</h2>
-      <p class="lead">Todo dia, um Companheiro de hoje, escolhido pelo tema da liturgia, com a ficha, os momentos da vida e as palavras que deixou. A Biblioteca de santos reúne todos, e você pode fixar um companheiro por uma semana ou por um tempo litúrgico.</p>
-    </div>
-    <div class="saints" id="saints"></div>
-  </div>
-</section>
-
-<!-- PRINCÍPIOS -->
-<section id="principios" aria-labelledby="h-pri">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <p class="eyebrow">O que o Lume faz diferente</p>
-      <h2 class="h2" id="h-pri">Misericórdia, não performance</h2>
-      <p class="lead">Aplicativos de hábito costumam premiar quem não falha. A vida espiritual é o contrário: o que conta é voltar. Estes princípios valem em cada tela.</p>
-    </div>
-    <div class="princ rv">
-      <div class="pr"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.400-7-10a4 4 0 0 1 7-2.600A4 4 0 0 1 19 10c0 5.600-7 10-7 10z"/></svg><h3>Misericórdia, não punição</h3><p>Quebrar uma sequência nunca vira tela vermelha. Um dia em branco recebe uma palavra de recomeço. Medimos a volta, não a perfeição.</p></div>
-      <div class="pr"><svg viewBox="0 0 24 24"><path d="M5 19v-7M10 19V6M15 19v-9M20 19v-5M3 4l18 16"/></svg><h3>Sem pontos nem ranking</h3><p>Nada de medalhas, XP ou comparação entre pessoas. O medidor compara você apenas com você mesmo.</p></div>
-      <div class="pr"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".8"/></svg><h3>Todo sacrifício tem um “Por quem?”</h3><p>O jejum, o silêncio, a renúncia: tudo é oferecido por alguém. A ascese vira intercessão.</p></div>
-      <div class="pr"><svg viewBox="0 0 24 24"><path d="M5 6h14M5 12h9M5 18h14M17 12l2 2 3-4"/></svg><h3>Exame sem nota</h3><p>É reflexão, não avaliação. Propósito revisto com “Vivi / Em parte / Esqueci”, fora do medidor.</p></div>
-      <div class="pr"><svg viewBox="0 0 24 24"><path d="M7 17c-2 0-3-1.200-3-3 0-3 2-5.500 5-6M17 17c-2 0-3-1.200-3-3 0-3 2-5.500 5-6"/></svg><h3>Nenhuma citação sem fonte</h3><p>Toda frase atribuída a um santo traz obra e referência. Na dúvida, não entra.</p></div>
-      <div class="pr"><svg viewBox="0 0 24 24"><path d="M12 3c2.500 3.400 5 6 5 9.400A5 5 0 0 1 7 12.400C7 9 9.500 6.400 12 3z"/></svg><h3>A chama nunca apaga</h3><p>Mesmo num dia sem nenhuma prática, a lâmpada continua acesa. A graça chega primeiro.</p></div>
-      <div class="pr"><svg viewBox="0 0 24 24"><path d="M5 4h10a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3V4zM5 17a3 3 0 0 1 3-3h10"/></svg><h3>A Palavra nunca fica atrás de paywall</h3><p>O Evangelho e a reflexão do dia são gratuitos, sempre. Ninguém paga para rezar, se confessar ou servir os pobres.</p></div>
-      <div class="pr"><svg viewBox="0 0 24 24"><path d="M6 11h12v9H6zM8.500 11V8a3.500 3.500 0 0 1 7 0v3"/></svg><h3>Privacidade por padrão</h3><p>Perfil, exame, meditações, diário e intenções ficam só no seu aparelho. Sem conta, sem anúncios, sem rastreadores.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ANO LITÚRGICO -->
-<section id="ano" class="band" aria-labelledby="h-ano">
-  <div class="wrap">
-    <div class="sec-head center rv">
-      <p class="eyebrow">O ano litúrgico</p>
-      <h2 class="h2" id="h-ano">O app veste a cor do dia</h2>
-      <p class="lead">O calendário do Brasil está dentro do app, com todas as solenidades, festas e memórias. A cor de destaque acompanha a Igreja. O próximo Advento começa em 29 de novembro de 2026.</p>
-    </div>
-    <div class="lit" id="lit">
-      <button class="lcard rv" type="button" aria-pressed="true" data-c="verde" style="--c:#3F6B3A"><i></i><b>Verde</b><span>Tempo Comum: a vida ordinária, vivida com esperança.</span></button>
-      <button class="lcard rv" type="button" aria-pressed="false" data-c="roxo" style="--c:#5B3A78;--d:.06s"><i></i><b>Roxo</b><span>Advento e Quaresma: preparar o caminho, converter-se.</span></button>
-      <button class="lcard rv" type="button" aria-pressed="false" data-c="rosa" style="--c:#D98BA3;--d:.12s"><i></i><b>Rosa</b><span>Gaudete, 3º domingo do Advento, e Laetare, 4º da Quaresma: a alegria que já desponta.</span></button>
-      <button class="lcard rv" type="button" aria-pressed="false" data-c="branco" style="--c:#fff;--d:.18s"><i></i><b>Branco e dourado</b><span>Natal, Páscoa e as festas do Senhor, de Nossa Senhora e dos santos não mártires.</span></button>
-      <button class="lcard rv" type="button" aria-pressed="false" data-c="vermelho" style="--c:#A32626;--d:.24s"><i></i><b>Vermelho</b><span>Pentecostes, a Paixão e a memória dos mártires.</span></button>
-    </div>
-  </div>
-</section>
-
-<!-- LUME+ -->
-<section id="lumeplus" aria-labelledby="h-plus">
-  <div class="wrap">
-    <div class="sec-head center rv">
-      <p class="eyebrow">Lume+</p>
-      <h2 class="h2" id="h-plus">Rever, aprofundar, acompanhar</h2>
-      <p class="lead">O Lume gratuito é completo para viver a Regra de Vida. O Lume+ é para quem quer olhar o caminho percorrido, aprofundar a oração e ser conduzido ao longo do ano litúrgico.</p>
-    </div>
-    <div class="rule rv">
-      <svg viewBox="0 0 100 124" aria-hidden="true"><use href="#lampada"/></svg>
-      <p>Ninguém paga para rezar, para se confessar, para servir os pobres nem para guardar o que escreveu. O Lume+ cobra por <b>rever, aprofundar, acompanhar e personalizar</b>.</p>
-    </div>
-    <div class="plus-grid">
-      <div class="pbox rv">
-        <h3>Sempre grátis</h3>
-        <p>Tudo o que você precisa para viver o dia.</p>
-        <ul class="checks">
-          <li>A Palavra do dia, a reflexão e o Companheiro de hoje, com a ficha completa</li>
-          <li>Práticas, ofertas com “Por quem?”, exame de consciência e missões da semana</li>
-          <li>Rosário, Terço da Misericórdia, Completas e todas as orações</li>
-          <li>Uma novena completa e uma trilha guiada</li>
-          <li>Calendário, lâmpada e cartão “Abertura à graça”</li>
-          <li>Escrever e salvar sem limite, diário dos últimos 90 dias, exportar e importar seus dados, backup do celular</li>
-          <li>Aparências Monástica e Moderna, claro e escuro, lembretes básicos</li>
-          <li>Compartilhar cartões bonitos de passagens e orações</li>
-        </ul>
-      </div>
-      <div class="pbox hi rv" style="--d:.1s">
-        <h3>Com o Lume+</h3>
-        <div class="seg" role="tablist" aria-label="Recursos do Lume+" id="plus-seg">
-          <button type="button" role="tab" aria-selected="true" data-g="rever">Rever</button>
-          <button type="button" role="tab" aria-selected="false" data-g="aprofundar">Aprofundar</button>
-          <button type="button" role="tab" aria-selected="false" data-g="acompanhar">Acompanhar</button>
-          <button type="button" role="tab" aria-selected="false" data-g="personalizar">Personalizar</button>
-        </div>
-        <ul class="checks" id="plus-list" role="tabpanel"></ul>
-        <p class="later"><b>Depois da validação:</b> widgets com a lâmpada na tela inicial, ícones alternativos e “Aprofundar o Evangelho”.</p>
-      </div>
-    </div>
-
-    <div class="plans">
-      <div class="plan best rv"><span class="badge">Melhor valor</span>
-        <h3>Anual</h3>
-        <div class="price">R$ 119,90<small>/ano</small></div>
-        <p class="eq">Equivale a <b>R$ 9,99 por mês</b>, 41% menos que o mensal.</p>
-        <ul><li>7 dias grátis para experimentar</li><li>Todos os recursos do Lume+</li><li>Cancele quando quiser, nas configurações da loja</li></ul>
-        <a class="btn" href="#baixar">Começar pelo app</a>
-      </div>
-      <div class="plan rv" style="--d:.1s">
-        <h3>Mensal</h3>
-        <div class="price">R$ 16,90<small>/mês</small></div>
-        <p class="eq">Para quem prefere começar devagar.</p>
-        <ul><li>Todos os recursos do Lume+</li><li>Renovação mensal, sem fidelidade</li><li>Cancele quando quiser, nas configurações da loja</li></ul>
-        <a class="btn ghost" href="#baixar">Começar pelo app</a>
-      </div>
-    </div>
-    <p class="fine rv">Por enquanto, durante a fase de validação, todos os recursos do Lume+ estão liberados para todos. Se você cancelar um dia, nada é apagado: o seu diário continua guardado. Preços em reais; em outros países, valem as tabelas das lojas.</p>
-  </div>
-</section>
-
-<!-- PRIVACIDADE -->
-<section id="privacidade" class="band" aria-labelledby="h-priv">
-  <div class="wrap priv">
-    <div class="rv">
-      <p class="eyebrow">Privacidade</p>
-      <h2 class="h2" id="h-priv">O seu diário é seu</h2>
-      <p class="lead">O Lume guarda o que você escreve só no seu aparelho. Não temos servidor, não temos conta de usuário e não coletamos dados pessoais.</p>
-      <ul class="checks" style="margin-top:22px">
-        <li>Sem conta e sem login</li>
-        <li>Sem anúncios, sem análise de uso e sem rastreadores</li>
-        <li>Funciona offline; só as atualizações de conteúdo usam a internet</li>
-        <li>Exporte ou apague todos os seus dados quando quiser, em Ajustes</li>
-      </ul>
-      <p style="margin-top:26px"><a class="btn ghost" href="privacidade/">Ler a política de privacidade</a></p>
-    </div>
-    <div class="rv" style="--d:.1s"><div class="phone-lock"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width=".8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 11h12v9H6zM8.500 11V8a3.500 3.500 0 0 1 7 0v3"/><path d="M12 14.200c.9 1.100 1.500 1.900 1.500 2.600a1.500 1.500 0 0 1-3 0c0-.7.600-1.500 1.500-2.600z" stroke="#E9A257"/></svg></div></div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="perguntas" aria-labelledby="h-faq">
-  <div class="wrap">
-    <div class="sec-head center rv">
-      <p class="eyebrow">Perguntas frequentes</p>
-      <h2 class="h2" id="h-faq">O que você talvez queira saber</h2>
-    </div>
-    <div class="faq rv">
-      <details><summary>O Lume é gratuito?</summary><div class="ans">Sim. Tudo o que você precisa para viver o dia é gratuito: a Palavra, as práticas, o exame, as orações e o Rosário. O Lume+ é opcional e oferece recursos para rever, aprofundar e acompanhar o seu caminho.</div></details>
-      <details><summary>Preciso criar uma conta?</summary><div class="ans">Não. O Lume não tem conta nem login. Seu perfil, suas práticas e seu diário ficam no próprio aparelho.</div></details>
-      <details><summary>Funciona sem internet?</summary><div class="ans">Sim. As leituras, as orações e a biblioteca vêm dentro do app. A internet só é usada para receber atualizações de conteúdo e abrir links externos.</div></details>
-      <details><summary>E se eu esquecer ou perder alguns dias?</summary><div class="ans">Nada acontece. O Lume nunca mostra uma tela de falha: quando você volta, recebe uma palavra de recomeço. A Jornada até destaca quantas vezes você voltou.</div></details>
-      <details><summary>De onde vêm os textos?</summary><div class="ans">Os textos são de grandes autores da tradição da Igreja (Padres, Doutores e místicos), sempre com autor e fonte. A Bíblia é a tradução do Pe. Antônio Pereira de Figueiredo. O Lume não inventa textos espirituais.</div></details>
-      <details><summary>Para quem é o app?</summary><div class="ans">Para católicos adultos que falam português do Brasil e querem constância e profundidade na vida de oração. O Lume não substitui a vida sacramental, o acompanhamento espiritual nem a Confissão.</div></details>
-      <details><summary>Quando posso baixar?</summary><div class="ans">O Lume já está na App Store para iPhone. A versão para Android está em finalização; assim que sair, o botão do Google Play passa a levar direto à loja.</div></details>
-      <details><summary>Encontrei um erro ou tenho uma sugestão.</summary><div class="ans">Escreva para <a href="mailto:lumeappcatolico@gmail.com">lumeappcatolico@gmail.com</a>. Toda ajuda para melhorar o app é bem-vinda, especialmente sobre textos e fontes.</div></details>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="final" aria-labelledby="h-fin">
-  <div class="grav-bg" aria-hidden="true" style="--img:url(img/gravuras/schnorr-186.webp)"></div>
-  <div class="wrap">
-    <img class="lamp-sm" src="img/lume-noite.svg" width="84" height="84" alt="" style="border-radius:22%">
-    <h2 id="h-fin">Acenda a sua lâmpada.</h2>
-    <p class="lead">Comece com uma prática só. A graça chega primeiro.</p>
-    <div class="cta-row">
-      <a class="store soon" href="#baixar" data-loja="ios" aria-disabled="true"><span><small>Baixar na</small><strong>App Store</strong></span></a>
-      <a class="store soon" href="#baixar" data-loja="android" aria-disabled="true"><span><small>Disponível no</small><strong>Google Play</strong></span></a>
-    </div>
-  </div>
-</section>
+  <footer>Lume - Regra de Vida Católica · <a href="https://meiemordem-ui.github.io/lume-site/">Voltar ao site</a></footer>
 </main>
 
-<footer>
-  <div class="wrap">
-    <div class="foot">
-      <div>
-        <a class="brand" href="#topo" aria-label="Lume, início" style="margin-bottom:14px"><svg aria-hidden="true"><use href="#lampada"/></svg><span>Lume</span></a>
-        <p style="margin:0;max-width:24rem">Regra de Vida Católica. Um dia de cada vez, com a graça chegando primeiro.</p>
-      </div>
-      <div><h4>Explorar</h4><ul><li><a href="#app">O app</a></li><li><a href="#palavra">A Palavra de hoje</a></li><li><a href="#rezar">Rezar</a></li><li><a href="#lumeplus">Lume+ e planos</a></li></ul></div>
-      <div><h4>Contato e documentos</h4><ul><li><a href="mailto:lumeappcatolico@gmail.com">lumeappcatolico@gmail.com</a></li><li><a href="privacidade/">Política de privacidade</a></li><li><a href="#perguntas">Perguntas frequentes</a></li></ul></div>
-    </div>
-    <p class="credits">Gravuras clássicas da tradição cristã; o app traz o crédito de cada imagem em Ajustes. © 2026 Lume.</p>
-  </div>
-</footer>
-
-<button class="icon-btn to-top" id="to-top" type="button" aria-label="Voltar ao topo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V6M6 12l6-6 6 6"/></svg></button>
-
-<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
-<script src="js/arte.js?v=4"></script>
-<script src="js/site.js?v=4"></script>
 </body>
 </html>
